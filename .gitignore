@@ -1,0 +1,12 @@
+.vs/
+Library/
+Logs/
+obj/
+Packages/
+ProjectSettings/
+Temp/
+*.vsconfig
+*.csproj
+*.sln
+Assets/*.meta
+Assets/Scenes
