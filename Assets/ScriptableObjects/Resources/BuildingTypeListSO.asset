@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38e70aa3ced4a0248ac72f97486e4865, type: 3}
-  m_Name: BuildingTypeList
+  m_Name: BuildingTypeListSO
   m_EditorClassIdentifier: 
-  buildingTypeList: []
+  buildingTypeList:
+  - {fileID: 11400000, guid: 82f7b5c091059d44a8cb6b0274235291, type: 2}
+  - {fileID: 11400000, guid: 3e9116e6c6936da498db90791279dd30, type: 2}
