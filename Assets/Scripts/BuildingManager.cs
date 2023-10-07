@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuildingManager : MonoBehaviour
 {
     private Camera mainCam;
-    [SerializeField] private Transform pfWoodHarvester;
+    [SerializeField] private BuildingTypeSO buildingType;
 
     private void Start()
     {
@@ -16,8 +16,8 @@ public class BuildingManager : MonoBehaviour
         // 0 -> left mouse button
         if (Input.GetMouseButtonDown(0))
         {
-            // sol tıkladığımda mouse ın olduğu yerde wood harvester spawnlancak
-            Instantiate(pfWoodHarvester, GetMouseWorldPosition(), Quaternion.identity);
+            // sol tıkladığımda mouse ın olduğu yerde spawnlancak
+            Instantiate(buildingType.prefab, GetMouseWorldPosition(), Quaternion.identity);
         }
     }
 
