@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Camera mainCam;
+    [SerializeField] private Transform pfWoodHarvester;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        mainCam = Camera.main;
+    }
     void Update()
     {
-        
+        // 0 -> left mouse button
+        if (Input.GetMouseButtonDown(0))
+        {
+            // sol tıkladığımda mouse ın olduğu yerde wood harvester spawnlancak
+            Instantiate(pfWoodHarvester, GetMouseWorldPosition(), Quaternion.identity);
+        }
+    }
+
+    private Vector3 GetMouseWorldPosition()
+    {
+        Vector3 mouseWorldPosition = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = 0;
+        return mouseWorldPosition;
     }
 }
